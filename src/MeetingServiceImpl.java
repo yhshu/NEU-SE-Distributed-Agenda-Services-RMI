@@ -8,11 +8,11 @@ import java.util.List;
 public class MeetingServiceImpl extends java.rmi.server.UnicastRemoteObject implements MeetingService {
     private int nextMeetingID = 0;
     private SimpleDateFormat date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-    private List<User> userList = new ArrayList<User>();
-    private List<Meeting> meetingList = new ArrayList<Meeting>();
+    private List<User> userList = new ArrayList<>();
+    private List<Meeting> meetingList = new ArrayList<>();
 
 
-    protected MeetingServiceImpl() throws RemoteException {
+    MeetingServiceImpl() throws RemoteException {
         // 要抛出RemoteException异常，必须显式写出构造方法
     }
 
@@ -57,7 +57,7 @@ public class MeetingServiceImpl extends java.rmi.server.UnicastRemoteObject impl
                 retList.add(meeting);
         }
         sort(retList);
-        int size = retList == null ? 0 : retList.size();
+        int size = (retList == null) ? 0 : retList.size();
         String[][] ret = new String[size][5];
         for (int j = 0; j < retList.size(); j++) {
             ret[j][0] = String.valueOf(retList.get(j).getID());
@@ -124,7 +124,7 @@ public class MeetingServiceImpl extends java.rmi.server.UnicastRemoteObject impl
             return false;
         User user = getUser(username);
         boolean clearFlag = false;
-        List<Meeting> deleted = new ArrayList<Meeting>();
+        List<Meeting> deleted = new ArrayList<>();
         for (Meeting meeting : meetingList) {
             if (meeting.getSponsor().equals(user))
                 deleted.add(meeting);

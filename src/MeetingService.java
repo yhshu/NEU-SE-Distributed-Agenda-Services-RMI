@@ -18,17 +18,17 @@ public interface MeetingService extends java.rmi.Remote {
     // 会议时间与参与者时间冲突，返回-4
     // 增加会议成功，返回1
 
-    public String[][] queryMeeting(String username, String password, String start, String end) throws ParseException, RemoteException;
+    String[][] queryMeeting(String username, String password, String start, String end) throws ParseException, RemoteException;
     // 查询会议
     // 包括注册用户主动召开的会议和被邀请参与的会议
     // 帐号密码错误返回null
 
-    public boolean deleteMeeting(String username, String password, int meetingID) throws RemoteException;
+    boolean deleteMeeting(String username, String password, int meetingID) throws RemoteException;
     // 删除会议
     // 注册用户只能删除已创建的会议
     // 清除成功返回true，失败返回false
 
-    public boolean clearMeeting(String username, String password) throws RemoteException;
+    boolean clearMeeting(String username, String password) throws RemoteException;
     // 清除会议
     // 注册用户清除自己召开的所有会议
 }
