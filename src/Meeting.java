@@ -56,7 +56,7 @@ public class Meeting {
         this.ID = ID;
     }
 
-    public Meeting(User sponsor, User otherUser, Date start, Date end, String title) {
+    Meeting(User sponsor, User otherUser, Date start, Date end, String title) {
         this.sponsor = sponsor;
         this.otherUser = otherUser;
         this.start = start;

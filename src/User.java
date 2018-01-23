@@ -26,10 +26,10 @@ public class User implements Serializable {
         return schedule;
     }
 
-    public User(String username, String password) {
+    User(String username, String password) {
         super();
         this.username = username;
         this.password = password;
-        this.schedule = new ArrayList<Meeting>();
+        this.schedule = new ArrayList<>();
     }
 }

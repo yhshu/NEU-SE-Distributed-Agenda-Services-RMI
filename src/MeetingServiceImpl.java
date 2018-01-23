@@ -48,7 +48,6 @@ public class MeetingServiceImpl extends java.rmi.server.UnicastRemoteObject impl
     public String[][] queryMeeting(String username, String password, String start, String end) throws ParseException {
         if (!checkUser(username, password))
             return null;
-        User user = getUser(username);
         Date startDate = date.parse(start);
         Date endDate = date.parse(end);
         ArrayList<Meeting> retList = new ArrayList<Meeting>();
