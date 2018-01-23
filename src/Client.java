@@ -8,7 +8,7 @@ public class Client {
     public static void main(String args[]) {
         System.out.println("Looking for meeting service");
         try {
-            MeetingService meetingService = (MeetingService) Naming.lookup("DAS");
+            MeetingService meetingService = (MeetingService) Naming.lookup("DAS"); // 获取远程对象，类型转换
             printMenu();
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             while (true) {
