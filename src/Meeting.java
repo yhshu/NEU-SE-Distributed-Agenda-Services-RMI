@@ -1,3 +1,11 @@
+/**
+ * 描述会议服务中的会议
+ *
+ * @author 舒意恒
+ * @see Server
+ * @see User
+ */
+
 import java.util.Date;
 
 public class Meeting {

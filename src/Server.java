@@ -1,3 +1,9 @@
+/**
+ * RMI服务器
+ *
+ * @author 舒意恒
+ */
+
 import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
 

@@ -1,3 +1,10 @@
+/**
+ * RMI客户端
+ *
+ * @author 舒意恒
+ * @throws java.rmi.NotBoundException,java.rmi.RemoteException
+ */
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.rmi.Naming;

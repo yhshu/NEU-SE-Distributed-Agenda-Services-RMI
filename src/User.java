@@ -1,3 +1,11 @@
+/**
+ * 描述会议服务中的用户
+ *
+ * @author 舒意恒
+ * @see Server
+ * @see Meeting
+ */
+
 import java.io.Serializable;
 import java.util.ArrayList;
 

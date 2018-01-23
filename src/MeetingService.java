@@ -1,3 +1,11 @@
+/**
+ * 服务接口
+ *
+ * @author 舒意恒
+ * @throws java.rmi.RemoteException,java.text.ParseException
+ * @see MeetingServiceImpl
+ */
+
 import java.rmi.RemoteException;
 import java.text.ParseException;
 

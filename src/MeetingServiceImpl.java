@@ -1,3 +1,11 @@
+/**
+ * 服务接口的具体实现
+ *
+ * @author 舒意恒
+ * @throws java.rmi.RemoteException,java.text.ParseException
+ * @see MeetingService
+ */
+
 import java.rmi.RemoteException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -145,8 +153,7 @@ public class MeetingServiceImpl extends java.rmi.server.UnicastRemoteObject impl
 
     private boolean checkUser(String username, String password) {
         // 帐号是否存在且密码正确
-        if (getUser(username) == null) return false;
-        else return getUser(username).getPassword().equals(password);
+        return getUser(username) != null && getUser(username).getPassword().equals(password);
 
     }
 
